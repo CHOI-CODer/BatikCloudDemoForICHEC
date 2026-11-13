@@ -12,6 +12,7 @@
 .env.*
 !.env.example
 node_modules/
+.publish-tools/
 
 # Publish only the current deployment archive and versioned manifests
 /release/*
