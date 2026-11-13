@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-13",
+  "repository": "CHOI-CODer/BatikCloudDemoForICHEC",
+  "repositoryUrl": "https://github.com/CHOI-CODer/BatikCloudDemoForICHEC",
+  "siteUrl": "https://choi-coder.github.io/BatikCloudDemoForICHEC/",
+  "appVersion": "0.2.8-preview",
+  "firstVerifiedPublishCommit": "ee808dee6ab753c7829d635313109eb439a4bbe5",
+  "sourceFilesAtFirstPublish": 130,
+  "deploymentFiles": 30,
+  "rootHttpStatus": 200,
+  "pagesBuild": "built",
+  "publicRuntimeHashes": "16/16 match",
+  "verifiedPublicFiles": [
+    {
+      "path": "index.html",
+      "bytes": 305,
+      "sha256": "2d0b4e1c4c73a14c2998832b5d4c8e40af211adefad50bc8ffaa2c09437769c1"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 1041,
+      "sha256": "99ba472554418be778a6c98c4dcd2ab0a4db488ac8bad00cab4387250425d5e1"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 27744,
+      "sha256": "61eb9b76086c3029980e708b36195ab7178eed477185db2f6dc8ec29e02da518"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 63346,
+      "sha256": "0f26b069e7f63e46e7bc79f5a4ad792b418a8ecb5362573d3b18bacd27340b5d"
+    },
+    {
+      "path": "web/assets/favicon.svg",
+      "bytes": 244,
+      "sha256": "9f8ec20c8a30b3318417561e7490543680fbd63cbcd1ff13130e21d6fc73e871"
+    },
+    {
+      "path": "web/assets/flower-bird.svg",
+      "bytes": 25983,
+      "sha256": "019203698b3250a6473f9622a89d97c2a27416492e6a128725084e230a23ceb2"
+    },
+    {
+      "path": "web/assets/spiral.svg",
+      "bytes": 20305,
+      "sha256": "20f7a5d8b321126303c259792dda9a25a3961c31c249f86622586a30d5a48a16"
+    },
+    {
+      "path": "engine/batik_compiler.html",
+      "bytes": 862,
+      "sha256": "2a9461e0da7a23db6574e4528ff3ed5509929a8a2e2fa8c1958c4b97bf550bbb"
+    },
+    {
+      "path": "shared/registry.js",
+      "bytes": 8894,
+      "sha256": "624a762823a07e64011b432d7e2a91ac452f5512b3b2e1466ecf2dbab212b96e"
+    },
+    {
+      "path": "shared/parser.js",
+      "bytes": 25557,
+      "sha256": "a822b76d2090a3910cf410670ccde8688bd430a293e037bf5973a59c970bf3e4"
+    },
+    {
+      "path": "shared/renderer.js",
+      "bytes": 18488,
+      "sha256": "7ca7ac9a3feb17f765c041c6b2fc9adf9488d658de39043bc639d3465ace8dcc"
+    },
+    {
+      "path": "shared/renderer-legacy.js",
+      "bytes": 9747,
+      "sha256": "244d860fdf5d7cf8fb9a586a44794364e4322df12d8c4ed29127e0b0de9c3c0f"
+    },
+    {
+      "path": "shared/formatter.js",
+      "bytes": 1912,
+      "sha256": "63a9947739e3811e70c505edd04143d832ebb2cfd1794138ae12f82463b685f4"
+    },
+    {
+      "path": "web/workshop-controls.js",
+      "bytes": 21606,
+      "sha256": "b9ded066475ceda9f445059371b37d8290ab2bd90b9e639b2a84d2c7870da319"
+    },
+    {
+      "path": "shared/storage.js",
+      "bytes": 10669,
+      "sha256": "baa56fc522fcef545833b8811b03dfbbd750bd53061c29c7b551d6f6ba17d8c6"
+    },
+    {
+      "path": "shared/ai-adapter.js",
+      "bytes": 1876,
+      "sha256": "6c5c3ad916cda5b67e7036dba2d95869d420e7dab91d0514f84182c689ab4166"
+    }
+  ],
+  "zipSha256": "db587d6d896303b64b9bab98fc9a78d2708807b53aabd55376128177f0b311bb",
+  "recordedAt": "2026-11-13T11:55:07.465Z",
+  "scope": "Deployment and resource hashes verified; application remains 0.2.8-preview. Existing browser and Coze access limitations remain documented in acceptance records."
+}
