@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-13T06:19:32.133Z",
+  "appVersion": "0.2.7-preview",
+  "status": "verified",
+  "scope": "布局和现有工具实际操作",
+  "checks": {
+    "brandRemoved": true,
+    "fullHeightAgent": true,
+    "toolsBelow": true,
+    "manual": true,
+    "historyTab": true,
+    "codeApply": true,
+    "historyRestore": true,
+    "resize": true,
+    "mobile": true,
+    "help": true,
+    "compiler": true
+  },
+  "measurements": {
+    "desktop": {
+      "brandCount": 0,
+      "canvas": {
+        "bottom": 381.796875,
+        "height": 281.296875,
+        "width": 281.296875,
+        "x": 559.3515625,
+        "y": 100.5
+      },
+      "docWidth": 1280,
+      "editor": {
+        "bottom": 642,
+        "height": 113.1953125,
+        "width": 556,
+        "x": 422,
+        "y": 528.8046875
+      },
+      "left": {
+        "bottom": 720,
+        "height": 720,
+        "width": 400,
+        "x": 0,
+        "y": 0
+      },
+      "preview": {
+        "bottom": 430.8046875,
+        "height": 362.8046875,
+        "width": 584,
+        "x": 408,
+        "y": 68
+      },
+      "revision": " · v1",
+      "sdk": {
+        "bottom": 688,
+        "height": 619.5,
+        "width": 375,
+        "x": 12,
+        "y": 68.5
+      },
+      "tools": {
+        "bottom": 690,
+        "height": 259.1953125,
+        "width": 584,
+        "x": 408,
+        "y": 430.8046875
+      },
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    "narrow": {
+      "brandCount": 0,
+      "canvas": {
+        "bottom": 381.796875,
+        "height": 281.296875,
+        "width": 281.296875,
+        "x": 534.3515625,
+        "y": 100.5
+      },
+      "docWidth": 1280,
+      "editor": {
+        "bottom": 642,
+        "height": 113.1953125,
+        "width": 606,
+        "x": 372,
+        "y": 528.8046875
+      },
+      "left": {
+        "bottom": 720,
+        "height": 720,
+        "width": 350,
+        "x": 0,
+        "y": 0
+      },
+      "preview": {
+        "bottom": 430.8046875,
+        "height": 362.8046875,
+        "width": 634,
+        "x": 358,
+        "y": 68
+      },
+      "revision": " · v4",
+      "sdk": {
+        "bottom": 672,
+        "height": 603.5,
+        "width": 325,
+        "x": 12,
+        "y": 68.5
+      },
+      "tools": {
+        "bottom": 690,
+        "height": 259.1953125,
+        "width": 634,
+        "x": 358,
+        "y": 430.8046875
+      },
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    "mobile": {
+      "brandCount": 0,
+      "canvas": {
+        "bottom": 940.796875,
+        "height": 218.5,
+        "width": 218.5,
+        "x": 85.75,
+        "y": 722.296875
+      },
+      "docWidth": 390,
+      "editor": {
+        "bottom": 1241.796875,
+        "height": 161,
+        "width": 362,
+        "x": 14,
+        "y": 1080.796875
+      },
+      "left": {
+        "bottom": 590.796875,
+        "height": 590.796875,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "preview": {
+        "bottom": 989.796875,
+        "height": 300,
+        "width": 390,
+        "x": 0,
+        "y": 689.796875
+      },
+      "revision": " · v4",
+      "sdk": {
+        "bottom": 557.796875,
+        "height": 489.296875,
+        "width": 366,
+        "x": 12,
+        "y": 68.5
+      },
+      "tools": {
+        "bottom": 1289.796875,
+        "height": 300,
+        "width": 390,
+        "x": 0,
+        "y": 989.796875
+      },
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "single": {
+      "brandCount": 0,
+      "canvas": {
+        "bottom": 0,
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "docWidth": 1280,
+      "editor": {
+        "bottom": 642,
+        "height": 113.1953125,
+        "width": 556,
+        "x": 422,
+        "y": 528.8046875
+      },
+      "left": {
+        "bottom": 720,
+        "height": 720,
+        "width": 400,
+        "x": 0,
+        "y": 0
+      },
+      "preview": {
+        "bottom": 430.8046875,
+        "height": 362.8046875,
+        "width": 584,
+        "x": 408,
+        "y": 68
+      },
+      "revision": "",
+      "sdk": {
+        "bottom": 688,
+        "height": 619.5,
+        "width": 375,
+        "x": 12,
+        "y": 68.5
+      },
+      "tools": {
+        "bottom": 690,
+        "height": 259.1953125,
+        "width": 584,
+        "x": 408,
+        "y": 430.8046875
+      },
+      "viewport": [
+        1280,
+        720
+      ]
+    }
+  },
+  "verificationLimit": "本轮仅布局验证，SDK 对话访问沿用其登录与分享条件"
+}

@@ -1,0 +1,16 @@
+{
+  "files": 23,
+  "hashes": "pass",
+  "htmlReferences": "pass",
+  "zipBytes": 88110,
+  "zipSha256": "60f76d726251167c9f9ec6ac2a1dbaecccd7bf4084db86d7c89692f7ac75391f",
+  "browserPassed": 31,
+  "browserFailed": 0,
+  "upgradePassed": 24,
+  "upgradeFailed": 0,
+  "strengthPassed": 7,
+  "strengthFailed": 0,
+  "appVersion": "0.2.1-preview",
+  "browserBaselineAppVersion": "0.2.0-preview",
+  "currentBrowserTests": 31
+}

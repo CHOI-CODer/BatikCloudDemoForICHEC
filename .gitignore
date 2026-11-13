@@ -1,0 +1,22 @@
+# Local operating-system and editor files
+.DS_Store
+._*
+.Rhistory
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local credentials and dependencies
+.env
+.env.*
+!.env.example
+node_modules/
+
+# Publish only the current deployment archive and versioned manifests
+/release/*
+!/release/BatiScript-static.zip
+!/release/deploy-manifest*.json
+
+# Original desktop reference is not part of the application
+/ScreenShot_2026-10-22_202436_215@2x.png

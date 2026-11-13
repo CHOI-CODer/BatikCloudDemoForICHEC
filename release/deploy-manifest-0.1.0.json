@@ -1,0 +1,97 @@
+{
+  "appVersion": "0.1.0-preview",
+  "generatedAt": "2026-10-21T14:25:17.687Z",
+  "entry": "index.html",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 305,
+      "sha256": "2d0b4e1c4c73a14c2998832b5d4c8e40af211adefad50bc8ffaa2c09437769c1"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 899,
+      "sha256": "8142c7dd44a20f29a2669e08f790615360468dcd41967ff3ce31e7021ed2c12d"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 21183,
+      "sha256": "80422fb6d31b67550fc43bec23856fa7cc8f9ebb607095d8e2800a47b50cb7f1"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 62098,
+      "sha256": "c459ab0daa9ac171bda6ca0f97acbc2ddd26fb96576227f42585b170adc2bcb2"
+    },
+    {
+      "path": "web/assets/favicon.svg",
+      "bytes": 244,
+      "sha256": "9f8ec20c8a30b3318417561e7490543680fbd63cbcd1ff13130e21d6fc73e871"
+    },
+    {
+      "path": "web/assets/flower-bird.svg",
+      "bytes": 25983,
+      "sha256": "019203698b3250a6473f9622a89d97c2a27416492e6a128725084e230a23ceb2"
+    },
+    {
+      "path": "web/assets/spiral.svg",
+      "bytes": 20305,
+      "sha256": "20f7a5d8b321126303c259792dda9a25a3961c31c249f86622586a30d5a48a16"
+    },
+    {
+      "path": "engine/batik_compiler.html",
+      "bytes": 713,
+      "sha256": "66b9d905957f6188201180f7581e866c2c8310bcc7210e4e12b02e5e8a512238"
+    },
+    {
+      "path": "shared/registry.js",
+      "bytes": 5790,
+      "sha256": "5a704990a0a5b39079692854bcdb81a341bdc917c6a201205a4840e97aca4b4c"
+    },
+    {
+      "path": "shared/parser.js",
+      "bytes": 19937,
+      "sha256": "861a3d92bc11530d61808e0e0c8eeba4534d24cf48a7b29ae0345af4a1b16993"
+    },
+    {
+      "path": "shared/renderer.js",
+      "bytes": 9723,
+      "sha256": "68e7235143b89e2fbc3fdaf20a857e7946957dd0d3b3a1f23e7d3f6c285df23a"
+    },
+    {
+      "path": "shared/storage.js",
+      "bytes": 7475,
+      "sha256": "97c81212fb4176c4b22f421b10b71ff1b966666b5c66a46dd261eabc4f4f81bc"
+    },
+    {
+      "path": "shared/ai-adapter.js",
+      "bytes": 1876,
+      "sha256": "6c5c3ad916cda5b67e7036dba2d95869d420e7dab91d0514f84182c689ab4166"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4723,
+      "sha256": "0dcafa8d126f0dbd95db9353d82bac15810476e0ba74f01607fa977740e6436d"
+    },
+    {
+      "path": "docs/ai-integration.md",
+      "bytes": 2790,
+      "sha256": "72007c2e51f33395bb6d03d28e6ae025a1f9819166a80b04bb61e140c3821040"
+    },
+    {
+      "path": "docs/migration.md",
+      "bytes": 1957,
+      "sha256": "565da9d0107a95a952d5e139851b54002f6e78d97d5f7f1f949eca5a315d0dd0"
+    },
+    {
+      "path": "docs/acceptance.md",
+      "bytes": 6692,
+      "sha256": "1de33279cee7da8cabe16b829b7b0bb182da3c284b339f95da8834dec1b65376"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "appVersion": "0.2.6-preview",
+  "files": 28,
+  "hashes": "pass",
+  "htmlReferences": "pass",
+  "credentialScan": "pass",
+  "zipBytes": 96408,
+  "zipSha256": "cb7f2861de103938690f3e3e3acc68c27d347cbe8de89793747c55c876cc0133",
+  "websdk": "embedding-verified",
+  "websdkAccess": {
+    "publicLink": true,
+    "expiresAtLocal": "2026-12-13 13:45 Asia/Shanghai",
+    "loggedInStandalone": "已在 Edge 观察到代码生成智能体和 sdk.coze.site 聊天框",
+    "unauthenticated": "跳转扣子主页与登录引导",
+    "guestChat": "blocked by Coze login",
+    "embeddedChat": "未登录环境未验证对话"
+  },
+  "requiredServerEnvironment": [],
+  "engineSourceUnchanged": true,
+  "previousBrowserBaseline": {
+    "agent": {
+      "appVersion": "0.2.5-preview",
+      "status": "verified"
+    },
+    "stage": {
+      "appVersion": "0.2.4-preview",
+      "status": "verified"
+    },
+    "sidebar": {
+      "appVersion": "0.2.3-preview",
+      "status": "verified"
+    },
+    "binary": {
+      "appVersion": "0.2.2-preview",
+      "passed": 11,
+      "failed": 0
+    },
+    "upgrade": {
+      "appVersion": "0.2.2-preview",
+      "passed": 24,
+      "failed": 0
+    },
+    "strength": {
+      "appVersion": "0.2.2-preview",
+      "passed": 7,
+      "failed": 0
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "appVersion": "0.2.2-preview",
+  "files": 24,
+  "hashes": "pass",
+  "htmlReferences": "pass",
+  "zipBytes": 91575,
+  "zipSha256": "43a877f307338b6ccea1b2fa31721057398a5b7d4ca0481f12a41043ba024425",
+  "browserChecks": {
+    "binary": {
+      "file": "tests/binary-browser-report.json",
+      "passed": 11,
+      "failed": 0
+    },
+    "upgrade": {
+      "file": "tests/upgrade-browser-0.2.2-report.json",
+      "passed": 24,
+      "failed": 0
+    },
+    "strength": {
+      "file": "tests/strength-browser-0.2.2-report.json",
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "browserPassed": 42,
+  "browserFailed": 0
+}

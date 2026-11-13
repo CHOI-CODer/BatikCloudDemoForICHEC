@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-13T05:59:33.442Z",
+  "appVersion": "0.2.6-preview",
+  "status": "embedding-verified",
+  "sdkURL": "https://code.coze.cn/web-sdk/7707450410642096179",
+  "checks": {
+    "iframe": true,
+    "staticEntry": true,
+    "reloadPreservesArtwork": true,
+    "pastePreview": true,
+    "apply": true,
+    "mobile": true,
+    "singleEntry": true
+  },
+  "desktop": {
+    "canvas": {
+      "height": 540.5,
+      "width": 540.5
+    },
+    "editor": {
+      "height": 100,
+      "width": 363
+    },
+    "iframe": {
+      "height": 287.296875,
+      "width": 375
+    },
+    "pageWidth": 1280,
+    "scripts": [
+      "http://127.0.0.1:4173/shared/registry.js",
+      "http://127.0.0.1:4173/shared/parser.js",
+      "http://127.0.0.1:4173/shared/renderer-legacy.js",
+      "http://127.0.0.1:4173/shared/renderer.js",
+      "http://127.0.0.1:4173/shared/formatter.js",
+      "http://127.0.0.1:4173/shared/storage.js",
+      "http://127.0.0.1:4173/shared/ai-adapter.js",
+      "http://127.0.0.1:4173/web/workshop-controls.js",
+      "http://127.0.0.1:4173/web/app.js"
+    ],
+    "source": "https://code.coze.cn/web-sdk/7707450410642096179",
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "mobile": {
+    "editorHeight": 205,
+    "iframe": {
+      "height": 328.5,
+      "width": 366
+    },
+    "pageWidth": 390,
+    "width": 390
+  },
+  "access": {
+    "publicLink": true,
+    "expiresAtLocal": "2026-12-13 13:45 Asia/Shanghai",
+    "loggedInStandalone": "已在 Edge 观察到代码生成智能体和 sdk.coze.site 聊天框",
+    "unauthenticated": "跳转扣子主页与登录引导",
+    "guestChat": "blocked by Coze login",
+    "embeddedChat": "未登录环境未验证对话"
+  }
+}

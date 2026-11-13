@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-21T14:12:52.367Z",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "platform": "MacIntel",
+  "results": [
+    {
+      "name": "PNG/JPEG/WebP 上传、稳定素材 ID 与三图层上限",
+      "status": "pass",
+      "ms": 539
+    },
+    {
+      "name": "T01 示例 → 配方 → 改码 → PNG，无模型请求",
+      "status": "pass",
+      "ms": 284
+    },
+    {
+      "name": "T21 损坏上传与图层失败不清空成功输出",
+      "status": "pass",
+      "ms": 12
+    },
+    {
+      "name": "T21 缺素材层隔离，有效层继续",
+      "status": "pass",
+      "ms": 4
+    },
+    {
+      "name": "T22 合成失败保留画面与配置",
+      "status": "pass",
+      "ms": 8
+    },
+    {
+      "name": "T22 PNG 编码失败可重试",
+      "status": "pass",
+      "ms": 122
+    },
+    {
+      "name": "T23 同图、配置、种子纹理可复现",
+      "status": "pass",
+      "ms": 191
+    },
+    {
+      "name": "基础肌理每个参数均影响像素",
+      "status": "pass",
+      "ms": 1011
+    },
+    {
+      "name": "四种融合结果可区分，移动会更新",
+      "status": "pass",
+      "ms": 623
+    },
+    {
+      "name": "T24 三种动画按固定纹理显现，进度可重复",
+      "status": "pass",
+      "ms": 280
+    },
+    {
+      "name": "T25 旧异步任务晚返回也不能覆盖新结果",
+      "status": "pass",
+      "ms": 264
+    },
+    {
+      "name": "T26 IME 组词期间不解析，结束后 400ms 应用",
+      "status": "pass",
+      "ms": 1203
+    },
+    {
+      "name": "未应用草稿不会被参数控件覆盖",
+      "status": "pass",
+      "ms": 552
+    },
+    {
+      "name": "T27 断网 / 超时 / 取消 / 空回复保留作品",
+      "status": "pass",
+      "ms": 69
+    },
+    {
+      "name": "T28 旧 AI 回复只展示建议，不自动覆盖",
+      "status": "pass",
+      "ms": 204
+    },
+    {
+      "name": "T29 两个备选方案需要选择",
+      "status": "pass",
+      "ms": 4
+    },
+    {
+      "name": "外部代码的原始草稿可再次打开并随项目保存",
+      "status": "pass",
+      "ms": 112
+    },
+    {
+      "name": "T30 IndexedDB Blob / 成功配置 / 草稿刷新恢复",
+      "status": "pass",
+      "ms": 909
+    },
+    {
+      "name": "T31 配额失败只影响自动保存",
+      "status": "pass",
+      "ms": 784
+    },
+    {
+      "name": "T32 完整项目导出/重导入保留素材、配置、原文",
+      "status": "pass",
+      "ms": 130
+    },
+    {
+      "name": "T32 损坏素材只隔离相应资产",
+      "status": "pass",
+      "ms": 2
+    },
+    {
+      "name": "T33 超限输入与可取消导出保留成功作品",
+      "status": "pass",
+      "ms": 60
+    },
+    {
+      "name": "T34 无外部运行依赖或图片请求",
+      "status": "pass",
+      "ms": 0
+    },
+    {
+      "name": "撤销 / 重做与相同结果去重",
+      "status": "pass",
+      "ms": 355
+    },
+    {
+      "name": "成功历史限制 50，草稿不占成功版本",
+      "status": "pass",
+      "ms": 148
+    },
+    {
+      "name": "删除最后图层与重置后仍可恢复",
+      "status": "pass",
+      "ms": 55
+    },
+    {
+      "name": "桌面布局无横向溢出，核心控件可达",
+      "status": "pass",
+      "ms": 51
+    },
+    {
+      "name": "窄屏 390px 布局与触摸替代按钮可达",
+      "status": "fail",
+      "error": "断言失败",
+      "ms": 52
+    },
+    {
+      "name": "768px 冷预览时间与动画帧率记录",
+      "status": "pass",
+      "ms": 540
+    },
+    {
+      "name": "单图入口使用相同解析/渲染语义与独立工程",
+      "status": "pass",
+      "ms": 373
+    }
+  ],
+  "metrics": {
+    "pngBytes": 470077,
+    "projectBytes": 411116,
+    "desktopCanvas": [
+      599,
+      599
+    ],
+    "preview768Ms": 153,
+    "animationObservedFps": 60
+  },
+  "passed": 29,
+  "failed": 1
+}

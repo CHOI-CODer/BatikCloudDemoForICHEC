@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-13T06:41:59.676Z",
+  "appVersion": "0.2.8-preview",
+  "status": "verified",
+  "scope": "分隔杆实际鼠标/键盘操作，窄屏鼠标模拟",
+  "checks": {
+    "mouseDrag": true,
+    "keyboard": true,
+    "minPreview": true,
+    "minTools": true,
+    "homeReset": true,
+    "doubleClickReset": true,
+    "persistence": true,
+    "codePreserved": true,
+    "manual": true,
+    "history": true,
+    "mobile": true,
+    "singleEntry": true
+  },
+  "measurements": {
+    "desktop": {
+      "viewport": [
+        1280,
+        720
+      ],
+      "defaultPreview": 366,
+      "afterDragUp100": 266,
+      "afterArrowDown": 276,
+      "minPreview": 200,
+      "minTools": 240,
+      "savedPreview": 316,
+      "restoredPreview": 316,
+      "doubleClickPreview": 366
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "barHeight": 20,
+      "beforePreview": 356,
+      "afterPreview": 296,
+      "pageWidth": 390
+    },
+    "singleEntry": {
+      "before": 296,
+      "after": 306
+    }
+  },
+  "limit": "触摸路径使用 Pointer Events；本机浏览器不支持合成触摸事件，触摸真机待验证。"
+}

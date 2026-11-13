@@ -1,0 +1,11 @@
+{
+  "files": 22,
+  "hashes": "pass",
+  "htmlReferences": "pass",
+  "zipBytes": 85612,
+  "zipSha256": "63252b81ee38313df6c235f0663fd411b7ce995026d869fb0659ee3e5549a0c7",
+  "browserPassed": 31,
+  "browserFailed": 0,
+  "upgradePassed": 24,
+  "upgradeFailed": 0
+}

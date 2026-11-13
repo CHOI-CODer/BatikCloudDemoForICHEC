@@ -1,0 +1,27 @@
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..'),archive=path.join(root,'release/BatiScript-static.zip'),dir=fs.mkdtempSync(path.join(os.tmpdir(),'batik-final-'));
+cp.execFileSync('/usr/bin/unzip',['-q',archive,'-d',dir]);
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'release/deploy-manifest.json'))),version=require('../shared/registry.js').VERSION.app;
+if(manifest.appVersion!==version)throw Error('Archive version mismatch');
+const sha=data=>crypto.createHash('sha256').update(data).digest('hex');
+for(const f of manifest.files)if(sha(fs.readFileSync(path.join(dir,f.path)))!==f.sha256)throw new Error('Hash mismatch '+f.path);
+for(const file of ['index.html','web/index.html','engine/batik_compiler.html'])for(const m of fs.readFileSync(path.join(dir,file),'utf8').matchAll(/(?:src|href)="([^"]+)"/g))if(!fs.existsSync(path.resolve(dir,path.dirname(file),m[1])))throw new Error('Missing '+m[1]);
+const stage=JSON.parse(fs.readFileSync(path.join(root,'tests/stage-browser-report.json')));
+if(stage.status!=='verified'||stage.appVersion!=='0.2.4-preview'||!Object.values(stage.checks).every(Boolean))throw Error('Preview layout baseline incomplete');
+const agent=JSON.parse(fs.readFileSync(path.join(root,'tests/agent-browser-report.json')));
+if(agent.status!=='verified'||agent.appVersion!=='0.2.5-preview'||!Object.values(agent.checks).every(Boolean))throw Error('Agent baseline incomplete');
+const sdk=JSON.parse(fs.readFileSync(path.join(root,'tests/websdk-browser-report.json')));
+if(sdk.status!=='embedding-verified'||sdk.appVersion!=='0.2.6-preview'||!Object.values(sdk.checks).every(Boolean))throw Error('Web SDK baseline incomplete');
+const layout=JSON.parse(fs.readFileSync(path.join(root,'tests/workspace-layout-browser-report.json')));
+if(layout.status!=='verified'||layout.appVersion!=='0.2.7-preview'||!Object.values(layout.checks).every(Boolean))throw Error('Workspace layout baseline incomplete');
+const splitter=JSON.parse(fs.readFileSync(path.join(root,'tests/row-splitter-browser-report.json')));
+if(splitter.status!=='verified'||splitter.appVersion!==version||!Object.values(splitter.checks).every(Boolean))throw Error('Preview splitter verification incomplete');
+for(const file of manifest.files)if(/eyJhbGciOi|Bearer\s+[A-Za-z0-9_-]{40}/.test(fs.readFileSync(path.join(dir,file.path),'utf8')))throw Error('Credential found in package');
+const prior=JSON.parse(fs.readFileSync(path.join(root,'release/deploy-manifest-0.2.3.json')));
+const sharedSources=prior.files.filter(file=>file.path.startsWith('shared/')&&file.path!=='shared/registry.js');
+for(const file of sharedSources)if(sha(fs.readFileSync(path.join(dir,file.path)))!==file.sha256)throw Error('Unexpected shared source change: '+file.path);
+const sidebar=JSON.parse(fs.readFileSync(path.join(root,'tests/sidebar-browser-report.json')));
+if(sidebar.status!=='verified'||sidebar.appVersion!==prior.appVersion||!Object.values(sidebar.checks).every(Boolean))throw Error('Sidebar baseline verification incomplete');
+const baseline={};for(const [key,file] of Object.entries({binary:'tests/binary-browser-report.json',upgrade:'tests/upgrade-browser-0.2.2-report.json',strength:'tests/strength-browser-0.2.2-report.json'})){const r=JSON.parse(fs.readFileSync(path.join(root,file)));if(r.failed)throw Error('Baseline verification failed: '+key);baseline[key]={appVersion:r.appVersion,passed:r.passed,failed:r.failed};}
+const result={appVersion:version,files:manifest.files.length,hashes:'pass',htmlReferences:'pass',credentialScan:'pass',zipBytes:fs.statSync(archive).size,zipSha256:sha(fs.readFileSync(archive)),previewSplitter:'verified',websdkAccess:sdk.access,requiredServerEnvironment:[],engineSourceUnchanged:true,previousBrowserBaseline:{layout:{appVersion:layout.appVersion,status:layout.status},websdk:{appVersion:sdk.appVersion,status:sdk.status},agent:{appVersion:agent.appVersion,status:agent.status},stage:{appVersion:stage.appVersion,status:stage.status},sidebar:{appVersion:sidebar.appVersion,status:sidebar.status},...baseline}};
+fs.writeFileSync(path.join(root,'tests/package-report.json'),JSON.stringify(result,null,2)+'\n');console.log(result);

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-04T14:23:43.010Z",
+  "appVersion": "0.2.3-preview",
+  "rendererVersion": "2.0.2",
+  "verification": "浏览器实际操作与 DOM 核对",
+  "desktopViewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "groups": [
+    "图层与效果",
+    "光影统一",
+    "染制风格",
+    "手作肌理",
+    "底色印染",
+    "画布与动画",
+    "播放设置"
+  ],
+  "checks": {
+    "desktopOrder": true,
+    "nestedComposition": true,
+    "compositeControl": true,
+    "styleControl": true,
+    "textureControl": true,
+    "paletteControl": true,
+    "mobile": true,
+    "mobileCodePreserved": true,
+    "compiler": true
+  },
+  "status": "verified",
+  "unchangedSource": {
+    "shared/renderer.js": true,
+    "shared/renderer-legacy.js": true,
+    "shared/parser.js": true,
+    "shared/formatter.js": true,
+    "shared/storage.js": true,
+    "shared/ai-adapter.js": true
+  },
+  "registryOnlyAppVersionChanged": true
+}

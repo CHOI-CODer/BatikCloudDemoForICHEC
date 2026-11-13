@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-04T13:57:25.760Z",
+  "appVersion": "0.2.2-preview",
+  "rendererVersion": "2.0.2",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "results": [
+    {
+      "name": "统一后只有纯黑/纯白，预览保留完整像素尺寸",
+      "status": "pass"
+    },
+    {
+      "name": "实际印染蒙版逐像素使用统一后的黑白图，蓝白取向互补",
+      "status": "pass"
+    },
+    {
+      "name": "原始透明和半透明边缘保持，原素材不被覆盖",
+      "status": "pass"
+    },
+    {
+      "name": "统一强度 0/50/100 时均保持纯黑白；关闭后按原明暗印染",
+      "status": "pass"
+    },
+    {
+      "name": "白底多色仅染图案，留白保持清晰",
+      "status": "pass"
+    },
+    {
+      "name": "空白明/暗图不会凭空生成灰色或花纹",
+      "status": "pass"
+    },
+    {
+      "name": "1024/2048 导出使用相同阈值与纯黑白基础",
+      "status": "pass"
+    },
+    {
+      "name": "统一后/印染后三态按钮显示实际输出，并可撤销关闭",
+      "status": "pass"
+    },
+    {
+      "name": "项目往返和动画不改变黑白基础",
+      "status": "pass"
+    }
+  ],
+  "metrics": {
+    "binary": {
+      "black": 39206,
+      "white": 216794,
+      "threshold": 133.5
+    },
+    "whitePixels": 210650,
+    "exports": [
+      {
+        "size": 1024,
+        "ms": 257,
+        "bytes": 240512
+      },
+      {
+        "size": 2048,
+        "ms": 639,
+        "bytes": 574049
+      }
+    ]
+  },
+  "passed": 9,
+  "failed": 0
+}

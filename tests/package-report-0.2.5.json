@@ -1,0 +1,39 @@
+{
+  "appVersion": "0.2.5-preview",
+  "files": 29,
+  "hashes": "pass",
+  "htmlReferences": "pass",
+  "credentialScan": "pass",
+  "zipBytes": 103088,
+  "zipSha256": "393245d923f3238f05a67c88044e879d91b6bfd5562b619b035183fbdee757dc",
+  "agent": "verified locally with real API",
+  "requiredServerEnvironment": [
+    "BATIK_COZE_TOKEN"
+  ],
+  "engineSourceUnchanged": true,
+  "previousBrowserBaseline": {
+    "stage": {
+      "appVersion": "0.2.4-preview",
+      "status": "verified"
+    },
+    "sidebar": {
+      "appVersion": "0.2.3-preview",
+      "status": "verified"
+    },
+    "binary": {
+      "appVersion": "0.2.2-preview",
+      "passed": 11,
+      "failed": 0
+    },
+    "upgrade": {
+      "appVersion": "0.2.2-preview",
+      "passed": 24,
+      "failed": 0
+    },
+    "strength": {
+      "appVersion": "0.2.2-preview",
+      "passed": 7,
+      "failed": 0
+    }
+  }
+}

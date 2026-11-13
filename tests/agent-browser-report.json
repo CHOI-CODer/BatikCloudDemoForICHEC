@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-13T05:28:58.240Z",
+  "appVersion": "0.2.5-preview",
+  "status": "verified",
+  "verification": "指定智能体的真实网络对话、本机浏览器界面操作与窄屏模拟",
+  "checks": {
+    "authenticatedLiveAPI": true,
+    "streamingReply": true,
+    "previewAndApply": true,
+    "cancelPreservesArtwork": true,
+    "retry": true,
+    "staleReplyFlag": true,
+    "partialRecovery": true,
+    "newConversation": true,
+    "singleEntryConnection": true,
+    "mobileNoOverflow": true,
+    "disconnectedLocalCreation": true,
+    "formattedCode": true
+  },
+  "mobile": {
+    "canvas": 390,
+    "chat": 127.5,
+    "code": 90,
+    "docWidth": 390,
+    "width": 390
+  },
+  "partialPreview": "部分应用 · 6 项赋值；4 条修正或跳过记录。\n\n3:6 · 补全“染色 颜色”。\n4:17 · 套色强度已调整至 0–1。\n5:6 · 套色颜色无效，保留已有套色。\n5:18 · 套色强度已调整至 0–1。",
+  "localVerification": {
+    "parserAndAdapter": 61,
+    "gateway": 5,
+    "total": 66
+  },
+  "deployment": "连接服务已在本机验证，线上主机需配置 BATIK_COZE_TOKEN 并启动服务"
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-04T14:04:18.600Z",
+  "appVersion": "0.2.2-preview",
+  "rendererVersion": "2.0.2",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "results": [
+    {
+      "name": "白底/蓝底使用同参数，恢复后与第一版参考接近",
+      "status": "pass"
+    },
+    {
+      "name": "默认光影统一开启时，白底留白清晰且少于旧加强版污染",
+      "status": "pass"
+    },
+    {
+      "name": "白底切换在右栏顶部且实际改变成功画面与代码",
+      "status": "pass"
+    },
+    {
+      "name": "多色在白底时只染花纹，背景仍留白",
+      "status": "pass"
+    },
+    {
+      "name": "恢复强度后动画末帧仍等于静态，图层叠加可用",
+      "status": "pass"
+    },
+    {
+      "name": "新参数/种子项目恢复与 2048 PNG 沿用柔和强度",
+      "status": "pass"
+    },
+    {
+      "name": "撤销/重做可恢复蓝白切换，不修改原参数值",
+      "status": "pass"
+    }
+  ],
+  "metrics": {
+    "comparison": [
+      {
+        "orientation": "蓝底白花",
+        "restoredError": 0.06819209346064815,
+        "strongError": 19.482189037181712
+      },
+      {
+        "orientation": "白底蓝花",
+        "restoredError": 0.04260819046585648,
+        "strongError": 20.35282332808883
+      }
+    ],
+    "white": {
+      "restored": 0.6993747287326388,
+      "previous": 0.6324005126953125
+    },
+    "multiWhite": 0.7019856770833334,
+    "png2048Bytes": 3240536
+  },
+  "passed": 7,
+  "failed": 0
+}

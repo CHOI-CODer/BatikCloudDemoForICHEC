@@ -1,0 +1,147 @@
+{
+  "appVersion": "0.2.6-preview",
+  "generatedAt": "2026-11-13T06:07:18.568Z",
+  "entry": "index.html",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 305,
+      "sha256": "2d0b4e1c4c73a14c2998832b5d4c8e40af211adefad50bc8ffaa2c09437769c1"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 1041,
+      "sha256": "99ba472554418be778a6c98c4dcd2ab0a4db488ac8bad00cab4387250425d5e1"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 26331,
+      "sha256": "243c426c3cb64d401aaf4f0ad030c7ad0ad75c42d7a48606696ce96865656e3f"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 63477,
+      "sha256": "8fa1478803f0d362395eb4c142c42767d2589d6c7d5b3993b1158123eeceb257"
+    },
+    {
+      "path": "web/assets/favicon.svg",
+      "bytes": 244,
+      "sha256": "9f8ec20c8a30b3318417561e7490543680fbd63cbcd1ff13130e21d6fc73e871"
+    },
+    {
+      "path": "web/assets/flower-bird.svg",
+      "bytes": 25983,
+      "sha256": "019203698b3250a6473f9622a89d97c2a27416492e6a128725084e230a23ceb2"
+    },
+    {
+      "path": "web/assets/spiral.svg",
+      "bytes": 20305,
+      "sha256": "20f7a5d8b321126303c259792dda9a25a3961c31c249f86622586a30d5a48a16"
+    },
+    {
+      "path": "engine/batik_compiler.html",
+      "bytes": 862,
+      "sha256": "2a9461e0da7a23db6574e4528ff3ed5509929a8a2e2fa8c1958c4b97bf550bbb"
+    },
+    {
+      "path": "shared/registry.js",
+      "bytes": 8894,
+      "sha256": "b51810fad6c1af5882cdb6080ce084db75880acb532da184621367881f8e612c"
+    },
+    {
+      "path": "shared/parser.js",
+      "bytes": 25557,
+      "sha256": "a822b76d2090a3910cf410670ccde8688bd430a293e037bf5973a59c970bf3e4"
+    },
+    {
+      "path": "shared/renderer.js",
+      "bytes": 18488,
+      "sha256": "7ca7ac9a3feb17f765c041c6b2fc9adf9488d658de39043bc639d3465ace8dcc"
+    },
+    {
+      "path": "shared/renderer-legacy.js",
+      "bytes": 9747,
+      "sha256": "244d860fdf5d7cf8fb9a586a44794364e4322df12d8c4ed29127e0b0de9c3c0f"
+    },
+    {
+      "path": "shared/formatter.js",
+      "bytes": 1912,
+      "sha256": "63a9947739e3811e70c505edd04143d832ebb2cfd1794138ae12f82463b685f4"
+    },
+    {
+      "path": "web/workshop-controls.js",
+      "bytes": 18445,
+      "sha256": "ac650e504b37f80d217c7a640932cd3a2e04d2eb62d843939ed27a98e8607b12"
+    },
+    {
+      "path": "shared/storage.js",
+      "bytes": 10669,
+      "sha256": "baa56fc522fcef545833b8811b03dfbbd750bd53061c29c7b551d6f6ba17d8c6"
+    },
+    {
+      "path": "shared/ai-adapter.js",
+      "bytes": 1876,
+      "sha256": "6c5c3ad916cda5b67e7036dba2d95869d420e7dab91d0514f84182c689ab4166"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5963,
+      "sha256": "3038faff84760c30aacce74782121de349b6d51f98f69d85bf541d68f690e69b"
+    },
+    {
+      "path": "docs/ai-integration.md",
+      "bytes": 1897,
+      "sha256": "b4c37d34c73a1e0e5bcc78fdc63033420ce6ece20360a716978fac6f683f2329"
+    },
+    {
+      "path": "docs/migration.md",
+      "bytes": 3408,
+      "sha256": "f5b85e95e76a2f8ad1b462fc6f703e9462aafe593747dad1bcde6de98fd393d6"
+    },
+    {
+      "path": "docs/acceptance.md",
+      "bytes": 6692,
+      "sha256": "1de33279cee7da8cabe16b829b7b0bb182da3c284b339f95da8834dec1b65376"
+    },
+    {
+      "path": "docs/acceptance-0.2.0.md",
+      "bytes": 7729,
+      "sha256": "02634a1b125e82586a23912172b846a1f8fcfcae189aef807cb57716b6e2bc79"
+    },
+    {
+      "path": "docs/acceptance-0.2.1.md",
+      "bytes": 2452,
+      "sha256": "a66cc461b7a550aa43d56b9702038ca4388f349ec0f2b35005031786f3dc11e5"
+    },
+    {
+      "path": "docs/acceptance-0.2.2.md",
+      "bytes": 4247,
+      "sha256": "145e49de882bf7d5412053b8dfd14fb61de01970aa3b1a66e3f3ccf95a46c1bb"
+    },
+    {
+      "path": "docs/acceptance-0.2.3.md",
+      "bytes": 2087,
+      "sha256": "f09c12b72cca0f56dfafe208db7355ccf50c2bb491166a8684c9166e48939375"
+    },
+    {
+      "path": "docs/acceptance-0.2.4.md",
+      "bytes": 1319,
+      "sha256": "310cc58f19917ca2c9025e82f53689b8efb973355ca6ee828cb1eae8f4dfe951"
+    },
+    {
+      "path": "docs/acceptance-0.2.5.md",
+      "bytes": 2410,
+      "sha256": "9406dcbf03a2ce3438e9cba39b340cde2e15a5bf7a879cda6cffbce5a1c40f06"
+    },
+    {
+      "path": "docs/acceptance-0.2.6.md",
+      "bytes": 1800,
+      "sha256": "a4299a6ed5216fe4adafd27f70ac5b58b8c01e984abdcc2b35ba8d2be1ae5028"
+    }
+  ]
+}
