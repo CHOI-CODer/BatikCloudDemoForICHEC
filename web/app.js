@@ -7,10 +7,10 @@
   document.getElementById('app').innerHTML=`
   <aside class="left">
     <section class="assistant assistant-sdk" aria-label="蜡染智能体 Web SDK">
-      <div class="section-heading"><h2>${icon('spark')}蜡染智能体</h2><span class="badge">Web SDK</span></div>
-      <div class="agent-tools"><button class="tiny-btn" data-action="sdk-reload">重新加载</button><a href="https://code.coze.cn/web-sdk/7707450410642096179" target="_blank" rel="noopener noreferrer">独立打开</a><button class="tiny-btn" data-action="copy-agent-context">复制当前配方</button><button class="tiny-btn" data-action="paste">粘贴代码</button></div>
-      <iframe id="agent-sdk" title="扣子蜡染智能体 Web SDK" src="https://code.coze.cn/web-sdk/7707450410642096179" referrerpolicy="no-referrer" allow="clipboard-write"></iframe>
-      <p class="sdk-hint">将回复中的配方复制到“粘贴代码”，预览后应用。需要登录时可独立打开。</p>
+      <div class="section-heading"><h2>${icon('spark')}蜡染智能体</h2><span class="badge" id="sdk-status" aria-live="polite">未连接</span></div>
+      <div class="agent-tools"><button class="tiny-btn" data-action="sdk-settings">连接设置</button><button class="tiny-btn" data-action="sdk-reload" disabled>重新加载</button><button class="tiny-btn" data-action="sdk-disconnect" disabled>断开</button><button class="tiny-btn" data-action="copy-agent-context">复制当前配方</button><button class="tiny-btn" data-action="paste">粘贴代码</button></div>
+      <div class="sdk-view"><iframe id="agent-sdk" title="扣子蜡染智能体 Web SDK" src="about:blank" referrerpolicy="no-referrer" allow="clipboard-write" hidden></iframe><div class="sdk-placeholder" id="sdk-placeholder"><div class="sdk-symbol">${icon('spark')}</div><h3>一起探索蜡染创意</h3><p id="sdk-message" role="status">连接智能体，开始讨论你的蜡染创意。</p><button class="btn primary" data-action="sdk-settings">连接智能体</button><button class="tiny-btn" data-action="sdk-reload" disabled>重试连接</button></div></div>
+      <p class="sdk-hint">将回复中的配方复制到“粘贴代码”，预览后应用。连接凭据仅用于当前窗口。</p>
     </section>
 
   </aside>
@@ -33,6 +33,7 @@
   </main>
   <input type="file" id="image-input" accept="image/png,image/jpeg,image/webp" multiple hidden><input type="file" id="import-input" accept=".batik,.json,.txt" hidden><input type="file" id="relink-input" accept="image/png,image/jpeg,image/webp" hidden>
   <div class="context-menu" id="context-menu" hidden><button data-action="duplicate">复制图层</button><button data-action="front">置于顶层</button><button data-action="back">置于底层</button><button data-action="relink">重新关联素材</button><button class="danger" data-action="delete-layer">删除图层</button></div><div class="toast" id="toast" role="status" hidden></div>
+  <dialog id="sdk-dialog"><div class="modal-head"><h2>连接蜡染智能体</h2><button class="icon-btn" data-close="sdk-dialog" aria-label="关闭">${icon('close')}</button></div><div class="modal-body sdk-settings"><p>使用扣子 Web SDK 连接代码生成智能体。凭据仅保留在当前窗口，刷新后需要重新连接。</p><label for="sdk-token">访问令牌 Token<input id="sdk-token" type="password" autocomplete="off" spellcheck="false" placeholder="粘贴扣子提供的访问令牌"></label><details><summary>自动续期连接（可选）</summary><label for="sdk-endpoint">你的凭据接口<input id="sdk-endpoint" type="text" inputmode="url" autocomplete="off" placeholder="https://你的服务器/api/coze-token"></label><p>使用该接口时，由你的服务器提供 access_token 或 token。此模式优先于手动令牌。</p></details><p class="muted">项目：7707450410642096179</p><p id="sdk-form-status" role="status"></p></div><div class="modal-actions"><button class="btn" data-close="sdk-dialog">取消</button><button class="btn primary" data-action="sdk-connect">连接</button></div></dialog>
   <dialog id="code-dialog"><div class="modal-head"><h2>粘贴中文代码</h2><button class="icon-btn" data-close="code-dialog" aria-label="关闭">${icon('close')}</button></div><div class="modal-body"><p>粘贴从其他 AI 获得的代码，或直接写下配方。有效部分会应用，原有作品持续保留。</p><textarea id="paste-code" aria-label="外部中文代码" spellcheck="false" placeholder="冰纹：密度＝１．２，宽度：４；"></textarea><label>应用方式 <select id="paste-mode"><option value="patch">局部修改 · 保留未提及的效果与图层</option><option value="replace">完整快照 · 重建代码声明的范围</option></select></label><div id="paste-preview" class="preview-diagnostics" hidden></div><div id="code-choices"></div></div><div class="modal-footer"><button class="btn" data-action="preview-paste">预览修正</button><button class="btn primary" id="apply-paste" data-action="apply-paste">应用有效部分</button></div></dialog>
   <dialog id="help-dialog"><div class="modal-head"><h2>把灵感，染进一块布</h2><button class="icon-btn" data-close="help-dialog" aria-label="关闭">${icon('close')}</button></div><div class="modal-body"><div class="eyebrow">A LITTLE GUIDE TO BATIKSCRIPT</div><div class="help-step"><b>一</b><div><strong>铺开图案</strong><p>上传 PNG / JPG / WebP，或从内置花鸟、几何纹开始。图片在浏览器本地处理。</p></div></div><div class="help-step"><b>二</b><div><strong>调色、画蜡、留纹</strong><p>使用右侧配方和参数，或在代码中写“冰纹 密度 1.2”。停止输入 400ms 自动预览，⌘ / Ctrl + S 立即应用。</p></div></div><div class="help-step"><b>三</b><div><strong>叠染与流动</strong><p>最多添加三个图层，尝试叠印、拼接、螺旋、交织。动画可暂停、拖动进度，并截取当前画面。</p></div></div><div class="help-step"><b>四</b><div><strong>带走一件作品</strong><p>PNG 是成品，.batik 是配方；完整项目包含图片与草稿，可在另一台设备重新打开。自动保存仅在当前浏览器生效。</p></div></div><p>左上角使用扣子 Web SDK。将回复的配方复制到“粘贴代码”，预览并应用到画布。示例图案为受传统纹样启发的程序绘制，并非文物图录。</p><p class="muted" id="app-version"></p></div></dialog>
   <dialog id="view-dialog"><div class="modal-head"><h2>当前成功版本 · 规范代码</h2><button class="icon-btn" data-close="view-dialog" aria-label="关闭">${icon('close')}</button></div><div class="modal-body"><p>这里对应最近成功画面，未应用草稿单独保留。</p><textarea id="normalized-code" readonly aria-label="成功规范代码"></textarea></div><div class="modal-footer"><button class="btn" data-action="copy-success">复制规范代码</button><button class="btn primary" data-action="export-code">下载 .batik</button></div></dialog>
@@ -43,6 +44,13 @@
   const $=id=>document.getElementById(id),single=document.body.dataset.entry==='single';
   const S={config:B.newConfig(),assets:new Map(),history:[],cursor:-1,revision:0,job:0,selected:null,result:null,dirty:false,composing:false,rawCode:'',lastAppliedRaw:'',controller:null,exportController:null,saveTimer:null,playing:false,progress:1,lastTick:0,frameId:0,textPast:[],textFuture:[],editorValue:'',view:'final',historyQueue:Promise.resolve(),normalizationUndo:null,pasteDraft:'',lastInput:null,previewSize:B.LIMITS.preview,ready:false};
   let toastTimer,editTimer,busyTimer,assetSequence=0,overlaySequence=0;
+  const sdk=B.createCozeSDKHost({frame:$('agent-sdk'),frameURL:new URL('coze-chat.html',scriptRoot).href,onState(state){
+    $('sdk-status').textContent=state.kind==='connected'?'已连接':state.kind==='idle'?'未连接':['loading','checking'].includes(state.kind)?'连接中':'连接未完成';
+    $('sdk-message').textContent=state.message;$('sdk-placeholder').hidden=!state.blocking;$('agent-sdk').hidden=state.kind==='idle';
+    document.querySelectorAll('[data-action="sdk-reload"],[data-action="sdk-disconnect"]').forEach(button=>button.disabled=!state.configured);
+  }});
+  if(globalThis.BATIK_COZE_CONFIG?.tokenEndpoint)try{sdk.connect(globalThis.BATIK_COZE_CONFIG);}catch(error){$('sdk-message').textContent=error.message;}
+  $('sdk-dialog').addEventListener('close',()=>{$('sdk-token').value='';$('sdk-endpoint').value='';$('sdk-form-status').textContent='';});
   const setText=(id,value)=>$(id).textContent=value;
   function toast(message){setText('toast',message);$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,3500);}
   function setStatus(message,status='success'){setText('apply-status',message);$('apply-status').className=status;}
@@ -198,7 +206,10 @@
   }
   async function actionHandler(action,event){
     switch(action){
-      case 'sdk-reload':$('agent-sdk').src='https://code.coze.cn/web-sdk/7707450410642096179';break;
+      case 'sdk-settings':$('sdk-form-status').textContent='';$('sdk-dialog').showModal();break;
+      case 'sdk-connect':try{sdk.connect({token:$('sdk-token').value,tokenEndpoint:$('sdk-endpoint').value});$('sdk-dialog').close();}catch(error){$('sdk-form-status').textContent=error.message;}break;
+      case 'sdk-reload':sdk.reload();break;
+      case 'sdk-disconnect':sdk.disconnect();break;
       case 'copy-agent-context':await copyText(B.toCode(S.config));toast('当前配方已复制，可粘贴给智能体。');break;
       case 'help':$('help-dialog').showModal();break;
       case 'upload':$('image-input').click();break;

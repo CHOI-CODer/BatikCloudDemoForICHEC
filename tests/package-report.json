@@ -1,19 +1,17 @@
 {
-  "appVersion": "0.2.8-preview",
-  "files": 30,
+  "appVersion": "0.2.9-preview",
+  "files": 36,
   "hashes": "pass",
   "htmlReferences": "pass",
   "credentialScan": "pass",
-  "zipBytes": 100276,
-  "zipSha256": "db587d6d896303b64b9bab98fc9a78d2708807b53aabd55376128177f0b311bb",
-  "previewSplitter": "verified",
+  "zipBytes": 108228,
+  "zipSha256": "d1ffbbba12399362ceeb2b213582cc92d8d3909cc65e74b4329f14c76bb0227f",
+  "previewSplitter": "baseline 0.2.8",
+  "sdkClient": "client-installed",
+  "liveConversation": "pending-token-endpoint",
   "websdkAccess": {
-    "publicLink": true,
-    "expiresAtLocal": "2026-12-13 13:45 Asia/Shanghai",
-    "loggedInStandalone": "已在 Edge 观察到代码生成智能体和 sdk.coze.site 聊天框",
-    "unauthenticated": "跳转扣子主页与登录引导",
-    "guestChat": "blocked by Coze login",
-    "embeddedChat": "未登录环境未验证对话"
+    "authentication": "project credential via official JavaScript SDK",
+    "tokenEndpoint": "awaiting user URL"
   },
   "requiredServerEnvironment": [],
   "engineSourceUnchanged": true,

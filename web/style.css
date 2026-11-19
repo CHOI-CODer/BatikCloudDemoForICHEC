@@ -46,3 +46,6 @@
 .row-splitter.dragging{user-select:none}
 .studio .tab-panel{overflow:auto}
 @media(max-width:899px){.row-splitter{height:20px}}
+
+/* Optional official Coze SDK, isolated from the local art workspace. */
+.sdk-view{position:relative;flex:1;min-height:0;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:#fff}.assistant-sdk .sdk-view>iframe{width:100%;height:100%;border:0;border-radius:0}.sdk-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center;background:#fffdf8}.sdk-symbol{padding:16px;border-radius:16px;background:#e4e9eb;color:var(--indigo)}.sdk-symbol svg{width:26px;height:26px}.sdk-placeholder h3{font-family:"Songti SC",serif;font-size:20px;color:var(--indigo)}.sdk-placeholder p{max-width:300px;line-height:1.8;color:#777366;font-size:14px}.sdk-settings label{display:block;margin-top:16px;font-size:14px}.sdk-settings input{display:block;width:100%;padding:11px;margin:8px 0;border:1px solid var(--line);border-radius:7px;background:#fff}.sdk-settings details{margin:18px 0}.sdk-settings summary{cursor:pointer;color:var(--indigo)}#sdk-form-status{color:var(--err)}

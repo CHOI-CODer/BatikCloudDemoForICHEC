@@ -1,0 +1,25 @@
+{
+  "appVersion": "0.2.9-preview",
+  "status": "client-installed",
+  "checks": {
+    "officialCdnAndProjectConfigured": true,
+    "bothEntriesShareHost": true,
+    "desktopBootObserved": true,
+    "connectionDialogObserved": true,
+    "originAndWindowValidation": true,
+    "staleRequestCancellation": true,
+    "tokenExpiryRecovery": true,
+    "noBundledCredential": true,
+    "wrapperLifecycleAndRefreshContract": true
+  },
+  "nodeTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "browser": {
+    "environment": "Native Microsoft Edge / macOS",
+    "scope": "Candidate desktop boot, unconnected panel and connection dialog observed before version label update; further automation interrupted by user browser activity."
+  },
+  "liveConversation": "pending-token-endpoint",
+  "tokenEndpoint": "User confirmed a server exists; HTTPS URL and login requirements requested, not yet received."
+}

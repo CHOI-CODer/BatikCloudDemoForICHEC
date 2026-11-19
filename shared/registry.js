@@ -2,7 +2,7 @@
 (function (root) {
   'use strict';
   const B = root.Bati = root.Bati || {};
-  B.VERSION = { app: '0.2.8-preview', schema: 2, dsl: '1.3', parser: '1.1.0', renderer: '2.0.2' };
+  B.VERSION = { app: '0.2.9-preview', schema: 2, dsl: '1.3', parser: '1.1.0', renderer: '2.0.2' };
   B.LIMITS = { imageBytes: 20 * 1024 ** 2, imagePixels: 24000000, codeBytes: 100 * 1024, statements: 2000, layers: 3, overlays: 8, history: 50, projectBytes: 100 * 1024 ** 2, preview: 768, budgetMs: 15000 };
   B.COLORS = { 靛蓝:'#1b3158', 苏根棕:'#744824', 赭石:'#a55823', 朱红:'#c63e26', 红:'#96323c', 鲜黄:'#f0cd37', 亮黄:'#e2be2d', 芥末黄:'#b99b37', 黄:'#c8a046', 翠绿:'#199155', 粉绿:'#9bc3a0', 绿:'#467850', 天蓝:'#55a0d7', 蓝:'#3c5a96', 青:'#286e73', 紫罗兰:'#7d55a5', 深紫:'#4e2a6c', 紫:'#643c82', 白色粉红:'#f2b9c0', 粉红:'#eb9ba0', 茶:'#825532', 褐:'#6e462d', 乳白:'#f5f0e1', 米色:'#e8dcc4', 白:'#ebe6dc', 黑:'#1e1e23' };
   B.STYLES = { 中式:'靛蓝', 峇迪:'苏根棕', 非洲:'赭石' };
