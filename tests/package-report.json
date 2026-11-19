@@ -17,7 +17,7 @@
       "mode": "owner-approved-public-embedded-token",
       "firstLoad": "verified",
       "fullPageRefresh": "verified",
-      "publicPublication": "authorized; pending upload and site verification"
+      "publicPublication": "published and all 21 runtime hashes verified"
     }
   },
   "requiredServerEnvironment": [],

@@ -124,22 +124,30 @@ async function publish() {
   details = {...details, pagesConfigured: true, url: siteUrl.href};
   stage = 'building'; saveReport();
   if (!api('pages/builds', 'POST').ok) console.log('已保存 Pages 配置，正在等待 GitHub 的发布任务。');
+  const publicFiles = manifest.files.filter(file => file.path !== '.nojekyll' && !file.path.startsWith('docs/') && file.path !== 'README.md');
+  const verifiedFiles = new Set();
   for (let attempt = 0; attempt < 24; attempt++) {
     const build = api('pages/builds/latest');
     if (build.ok && build.value.commit === details.commit) {
       if (build.value.status === 'errored') throw new Error('源码已上传，GitHub 网页发布失败，请检查仓库的 Pages 任务。');
       if (build.value.status === 'built') {
         stage = 'verification'; saveReport();
-        const publicFiles = manifest.files.filter(file => file.path !== '.nojekyll' && !file.path.startsWith('docs/') && file.path !== 'README.md');
-        try {
-          await Promise.all(publicFiles.map(async file => {
-            const response = await fetch(new URL(file.path, siteUrl), {signal: AbortSignal.timeout(20000)});
-            if (!response.ok || digest(Buffer.from(await response.arrayBuffer())) !== file.sha256) throw new Error('资源未就绪');
-          }));
+        const pending = publicFiles.filter(file => !verifiedFiles.has(file.path));
+        await Promise.all(Array.from({length: Math.min(4, pending.length)}, async () => {
+          while (pending.length) {
+            const file = pending.shift();
+            try {
+              const response = await fetch(new URL(file.path, siteUrl), {signal: AbortSignal.timeout(20000)});
+              if (response.ok && digest(Buffer.from(await response.arrayBuffer())) === file.sha256) verifiedFiles.add(file.path);
+            } catch { /* Retry only the unverified file on the next pass. */ }
+          }
+        }));
+        if (verifiedFiles.size === publicFiles.length) {
           details.siteVerified = true; stage = 'complete'; saveReport();
           console.log(`网页已上线并核对全部 ${publicFiles.length} 个运行资源：\n${siteUrl.href}`);
           return;
-        } catch { stage = 'building'; }
+        }
+        stage = 'building';
       }
     }
     if (attempt === 0) console.log('正在等待网页发布和资源同步……');

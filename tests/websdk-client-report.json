@@ -36,15 +36,21 @@
     "mode": "owner-approved-public-embedded-token",
     "firstLoad": "verified",
     "fullPageRefresh": "verified",
-    "publicPublication": "authorized; pending upload and site verification"
+    "publicPublication": "published and all 21 runtime hashes verified"
   },
   "evidence": [
     "tests/screenshots/websdk-0.2.9-connected.jpg",
     "tests/screenshots/websdk-0.2.9-mobile-settings.jpg",
-    "tests/screenshots/websdk-0.2.9-auto-connect.jpg"
+    "tests/screenshots/websdk-0.2.9-auto-connect.jpg",
+    "tests/screenshots/websdk-0.2.9-public-ready.jpg"
   ],
   "regressionTests": {
     "passed": 65,
     "failed": 0
+  },
+  "production": {
+    "record": "docs/github-deployment-2026-11-19.json",
+    "commit": "9d82542c2641d6a9a094976577dd9abeb63e5910",
+    "runtimeHashes": 21
   }
 }

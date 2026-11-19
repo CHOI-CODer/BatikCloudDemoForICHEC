@@ -1,0 +1,140 @@
+{
+  "recordedAt": "2026-11-19T05:33:22.679Z",
+  "appVersion": "0.2.9-preview",
+  "repository": "CHOI-CODer/BatikCloudDemoForICHEC",
+  "url": "https://choi-coder.github.io/BatikCloudDemoForICHEC/",
+  "firstVerifiedCommit": "9d82542c2641d6a9a094976577dd9abeb63e5910",
+  "pages": {
+    "status": "built",
+    "branch": "main",
+    "path": "/"
+  },
+  "deploymentFiles": 37,
+  "runtimeFilesVerified": 21,
+  "runtimeVerification": [
+    {
+      "file": "web/app.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/index.html",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/style.css",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/assets/favicon.svg",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/assets/flower-bird.svg",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "index.html",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/assets/spiral.svg",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/coze-sdk.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/coze-config.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/coze-chat.html",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "engine/batik_compiler.html",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/coze-chat.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/coze-chat.css",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/registry.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/parser.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/renderer.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/formatter.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "web/workshop-controls.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/renderer-legacy.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/storage.js",
+      "http": 200,
+      "match": true
+    },
+    {
+      "file": "shared/ai-adapter.js",
+      "http": 200,
+      "match": true
+    }
+  ],
+  "automaticConnection": {
+    "mode": "owner-approved-public-embedded-token",
+    "firstLoad": "verified in local real SDK",
+    "fullPageRefresh": "verified in local real SDK",
+    "productionRuntimeHashes": "all match verified local source"
+  },
+  "validation": {
+    "nodeTestsPassed": 65,
+    "realConversation": "one real recipe reply received",
+    "recipeApplication": "40 assignments, 0 corrections/skips, applied to canvas",
+    "reconnect": "authenticated again; artwork preserved",
+    "disconnect": "artwork and editor preserved",
+    "mobile": "390 CSS px connection dialog fits"
+  },
+  "publicCredentialApproval": "docs/coze-public-demo.json",
+  "limitations": [
+    "Production browser interaction not repeated: browser automation became unavailable; all production runtime resources were verified over HTTPS.",
+    "Server token issuance/renewal and mobile hardware not tested."
+  ]
+}
