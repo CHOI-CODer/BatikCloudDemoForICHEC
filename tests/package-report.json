@@ -1,17 +1,24 @@
 {
   "appVersion": "0.2.9-preview",
-  "files": 36,
+  "files": 37,
   "hashes": "pass",
   "htmlReferences": "pass",
   "credentialScan": "pass",
-  "zipBytes": 108228,
-  "zipSha256": "d1ffbbba12399362ceeb2b213582cc92d8d3909cc65e74b4329f14c76bb0227f",
+  "approvedPublicCredential": "web/coze-config.js",
+  "zipBytes": 109264,
+  "zipSha256": "15fcf0aeb1d97bcc7e7650d47ebb64b7765edefde5056249e5a86b209af716ab",
   "previewSplitter": "baseline 0.2.8",
   "sdkClient": "client-installed",
-  "liveConversation": "pending-token-endpoint",
+  "liveConversation": "verified-session-credential",
   "websdkAccess": {
     "authentication": "project credential via official JavaScript SDK",
-    "tokenEndpoint": "awaiting user URL"
+    "tokenEndpoint": "Not configured: owner explicitly selected public embedded-token automatic connection.",
+    "automaticConnection": {
+      "mode": "owner-approved-public-embedded-token",
+      "firstLoad": "verified",
+      "fullPageRefresh": "verified",
+      "publicPublication": "authorized; pending upload and site verification"
+    }
   },
   "requiredServerEnvironment": [],
   "engineSourceUnchanged": true,

@@ -1,0 +1,8 @@
+{
+  "kind": "owner-approved-public-coze-demo",
+  "approvedOn": "2026-11-19",
+  "projectId": "7707450410642096179",
+  "file": "web/coze-config.js",
+  "sha256": "e3c7e760354fc1411b9085f9c64e911732d29c0798cb50565712b5a838aae16d",
+  "scope": "Owner explicitly confirmed that this token may be published in the public GitHub repository and GitHub Pages, allowing visitors to retrieve it and use Coze quota. Only the exact configured file is allowed; all other credentials remain blocked."
+}

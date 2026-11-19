@@ -1,16 +1,22 @@
 # 官方 JavaScript Web SDK（0.2.9-preview）
 
-左栏使用用户指定的 CDN 与项目 `7707450410642096179`，调用 `cozeWebSDK.init({projectId, container, refreshToken})`。加载和聊天放在独立文档内，重连只重建聊天模块。中栏和右栏保持原有创作管线。
+左栏使用用户指定的 CDN 与项目 7707450410642096179，调用 cozeWebSDK.init({projectId, container, refreshToken})。SDK 放在独立聊天文档内，重连只重建聊天模块，中栏和右栏沿用原有创作管线。
 
-## 当前窗口连接
+## 打开即连接
 
-点击左侧“连接设置”，填写访问令牌并连接。支持粘贴带 Bearer 或尖括号的令牌；连接后清空输入框。凭据仅保留在当前窗口内存，断开、刷新或关闭后需要重新配置，不写入作品、历史、URL、日志或部署包。
+按负责人明确要求，web/coze-config.js 内置所提供的个人访问令牌，打开或刷新页面均自动连接，无需另外填写。负责人已确认公开网页和 GitHub 源码会公开该令牌，任何访客都能读取并使用相应扣子额度。授权范围及唯一允许包含凭据的文件哈希见 coze-public-demo.json；其他文件仍执行凭据拦截。
 
-也可填写高级设置中的短期凭据接口。接口以 GET 返回 JSON，包含 access_token 或 token 字段。需要允许网站来源的 CORS；生产来源为 `https://choi-coder.github.io`，本地预览来源为 `http://127.0.0.1:4173`。同源接口带本站登录状态，跨站默认不带 Cookie。
+令牌失效后需要更换该配置并重新部署。此静态配置不具备服务器自动签发新令牌的能力。SDK 初次加载与凭据刷新均经过 refreshToken 适配；无效/过期、网络超时与加载失败分别显示可操作提示。
 
-## 所有访客自动连接
+## 临时切换连接
 
-在源码的 `web/coze-config.js` 填入服务器提供的公开接口地址：
+连接设置保留为备用入口。临时填写的个人令牌只留在当前窗口内存，不写入作品、历史、URL 或浏览器存储；刷新后恢复公开演示配置。聊天重载和断开均不改变画布、编辑内容与作品历史。
+
+回复中的代码可复制到“粘贴代码”，预览修正并应用到画布。绘图素材默认不向聊天模块发送；在 SDK 自身界面主动上传的内容由扣子处理。
+
+## 后续改用服务器自动续期
+
+可将 web/coze-config.js 改为仅包含公开接口地址的配置：
 
 ```js
 globalThis.BATIK_COZE_CONFIG=Object.freeze({
@@ -19,10 +25,6 @@ globalThis.BATIK_COZE_CONFIG=Object.freeze({
 });
 ```
 
-接口按访客身份签发短期凭据；服务器负责身份、权限、额度与密钥管理。跨站接口若明确需要登录 Cookie，可设置 useCookies 为 true，同时由服务器配置相应的 CORS 和 Cookie 策略。当前用户已确认有接口，完整 HTTPS 地址及登录要求尚待提供，因此本包默认打开连接设置入口。
+接口以 GET 返回 JSON，包含 access_token 或 token。服务器按访客身份管理凭据、权限和额度，并允许网站来源的 CORS；生产来源为 https://choi-coder.github.io。同源接口带本站登录状态，跨站默认不带 Cookie，明确需要登录 Cookie 时设置 useCookies:true。当前未配置此接口，真实服务器续期待后续验证。
 
-SDK 首次初始化和过期续期均通过 refreshToken 获取凭据。手动令牌过期时提示更新；服务器接口可自动取新令牌。项目加载成功才显示“已连接”；凭据无效、加载失败与网络超时分别提示。断开与重新连接会取消旧请求，迟到的回复不会覆盖当前连接。
-
-聊天回复通过“复制当前配方”和“粘贴代码”与本地解释器配合使用。绘图素材默认不向聊天模块发送；用户在 SDK 自身界面内上传内容时，由该模块处理。
-
-依据：[扣子 Web SDK（AI 编程）官方文档](https://docs.coze.cn/developer_guides_vibe_coding_websdk)。旧分享页的访问记录保留在 acceptance-0.2.6.md，不代表本版本的实际鉴权结果。
+依据：[扣子 Web SDK 官方文档](https://docs.coze.cn/developer_guides_vibe_coding_websdk)。实测见 acceptance-0.2.9.md，旧分享页记录仅保留历史用途。

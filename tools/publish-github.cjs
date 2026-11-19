@@ -6,6 +6,7 @@ const path = require('node:path');
 const os = require('node:os');
 const crypto = require('node:crypto');
 const cp = require('node:child_process');
+const {isApprovedPublicDemoCredential} = require('./credential-policy.cjs');
 
 const root = path.resolve(__dirname, '..');
 const repository = 'CHOI-CODer/BatikCloudDemoForICHEC';
@@ -63,10 +64,13 @@ function preflight() {
   const files = requireResult(run(git, ['ls-files', '-z']), '无法检查上传范围。').split('\0').filter(Boolean);
   const secrets = [/eyJ[A-Za-z0-9_-]{80,}\.[A-Za-z0-9_-]{50,}\.[A-Za-z0-9_-]{30,}/,
     /gh[pousr]_[A-Za-z0-9]{30,}/, /github_pat_[A-Za-z0-9_]{40,}/,
+    /pat_[A-Za-z0-9]{20,}/, /czs_[A-Za-z0-9_-]{20,}/,
     /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/];
+  const approvalPath = path.join(root, 'docs/coze-public-demo.json');
+  const approval = fs.existsSync(approvalPath) ? JSON.parse(fs.readFileSync(approvalPath, 'utf8')) : null;
   for (const file of files.filter(file => /\.(?:js|cjs|html|css|md|txt|json|command)$/.test(file))) {
     const text = fs.readFileSync(path.join(root, file), 'utf8');
-    if (secrets.some(pattern => pattern.test(text))) throw new Error(`上传范围发现疑似凭据，请先检查：${file}`);
+    if (secrets.some(pattern => pattern.test(text)) && !isApprovedPublicDemoCredential(file, text, approval)) throw new Error(`上传范围发现疑似凭据，请先检查：${file}`);
   }
   requireResult(run(process.execPath, ['tests/verify-package.cjs']), '部署包校验未通过，请先重新打包并核对。');
   const after = requireResult(run(git, ['status', '--porcelain', '--untracked-files=no']), '无法复核提交状态。');

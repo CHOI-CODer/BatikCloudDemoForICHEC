@@ -1,6 +1,6 @@
 {
   "appVersion": "0.2.9-preview",
-  "generatedAt": "2026-11-19T02:14:32.252Z",
+  "generatedAt": "2026-11-19T05:18:46.687Z",
   "entry": "index.html",
   "files": [
     {
@@ -20,13 +20,13 @@
     },
     {
       "path": "web/style.css",
-      "bytes": 28818,
-      "sha256": "cc7d334a39ed4ed80ef75d4ecedefc3b451e835c1effbd7468d6b0c99eea0638"
+      "bytes": 29013,
+      "sha256": "53a4936edcb1c573b68b599e2508f38725d8ece2c665df52f8cfece39fdaabba"
     },
     {
       "path": "web/app.js",
-      "bytes": 66113,
-      "sha256": "48238fa4dc87855188e1924ed4738d42a2cd703f5b639b420ebf08ed606dc7f1"
+      "bytes": 66200,
+      "sha256": "f04c618f885ded4d792396595675dfc95a09e4b6161296cc0c5ba770422ec8d2"
     },
     {
       "path": "web/assets/favicon.svg",
@@ -55,8 +55,8 @@
     },
     {
       "path": "web/coze-config.js",
-      "bytes": 157,
-      "sha256": "c226773fde210245957c75645ffdf4a0a28ab250197494bfb2fe1e26877e55fe"
+      "bytes": 245,
+      "sha256": "e3c7e760354fc1411b9085f9c64e911732d29c0798cb50565712b5a838aae16d"
     },
     {
       "path": "web/coze-chat.html",
@@ -115,13 +115,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 7267,
-      "sha256": "4790116d1a0ddcb4dfe061b0a13ec12f40a04252ff4c1b2617651cce1c15bd29"
+      "bytes": 7274,
+      "sha256": "b8b11115b5772af8b2089abdec818bd247835f305602acacd850ef8ca91dd845"
     },
     {
       "path": "docs/ai-integration.md",
-      "bytes": 2281,
-      "sha256": "9cdff67b5ef911bd32dfa01c7d00def99906729886bce35f7e1e4d1cebf060db"
+      "bytes": 2220,
+      "sha256": "91ad55b4f01af93855d2b4bd16bd22a678d0b63b2d839ec6279d8192631446ad"
+    },
+    {
+      "path": "docs/coze-public-demo.json",
+      "bytes": 486,
+      "sha256": "69b2c0cd4d344b9a42e15165b3c1960d2ee241dea3800b24e136039a12ecefff"
     },
     {
       "path": "docs/migration.md",
@@ -180,8 +185,8 @@
     },
     {
       "path": "docs/acceptance-0.2.9.md",
-      "bytes": 1811,
-      "sha256": "a615f1708d5b3ca36b386ff3db15ab994b908971ac9bf8abacc15ed053aabb9a"
+      "bytes": 2615,
+      "sha256": "6a4cd251fa6e4a346a4e49614eda8c3a82179c87515671839ed553513757cea6"
     }
   ]
 }

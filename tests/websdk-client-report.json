@@ -9,17 +9,42 @@
     "originAndWindowValidation": true,
     "staleRequestCancellation": true,
     "tokenExpiryRecovery": true,
-    "noBundledCredential": true,
-    "wrapperLifecycleAndRefreshContract": true
+    "wrapperLifecycleAndRefreshContract": true,
+    "realProjectAuthentication": true,
+    "realRecipeResponse": true,
+    "recipePasteApplied": true,
+    "reloadPreservesArtwork": true,
+    "disconnectPreservesArtwork": true,
+    "mobileConnectionDialog390px": true,
+    "singleEntryObserved": true,
+    "embeddedTokenAutoConnect": true,
+    "embeddedTokenFullPageRefresh": true,
+    "noUnapprovedCredential": true,
+    "publicDemoCredentialDisclosureConfirmed": true
   },
   "nodeTests": {
-    "passed": 9,
+    "passed": 10,
     "failed": 0
   },
   "browser": {
-    "environment": "Native Microsoft Edge / macOS",
-    "scope": "Candidate desktop boot, unconnected panel and connection dialog observed before version label update; further automation interrupted by user browser activity."
+    "environment": "Codex in-app browser on macOS",
+    "scope": "Official CDN and real Coze project loaded with the user credential. One real recipe response copied through the visible SDK code editor, previewed as 40 assignments / 0 corrections and applied. Reconnect and disconnect preserved the rendered demo and 530-character editor. 390 CSS px connection dialog fit (left 16px, right 374px). Both app entries observed. Embedded-token copy automatically connected without form input."
   },
-  "liveConversation": "pending-token-endpoint",
-  "tokenEndpoint": "User confirmed a server exists; HTTPS URL and login requirements requested, not yet received."
+  "liveConversation": "verified-session-credential",
+  "tokenEndpoint": "Not configured: owner explicitly selected public embedded-token automatic connection.",
+  "automaticConnection": {
+    "mode": "owner-approved-public-embedded-token",
+    "firstLoad": "verified",
+    "fullPageRefresh": "verified",
+    "publicPublication": "authorized; pending upload and site verification"
+  },
+  "evidence": [
+    "tests/screenshots/websdk-0.2.9-connected.jpg",
+    "tests/screenshots/websdk-0.2.9-mobile-settings.jpg",
+    "tests/screenshots/websdk-0.2.9-auto-connect.jpg"
+  ],
+  "regressionTests": {
+    "passed": 65,
+    "failed": 0
+  }
 }
